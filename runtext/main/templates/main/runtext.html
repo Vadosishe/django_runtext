@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Генератор видео
+{% endblock %}
+
+{% block content %}
+<form method="post" action="{% url 'my_form' %}">
+  {% csrf_token %}
+  {{ form.MyForm }}
+  <button type="submit">Отправить</button>
+</form>
+
+<h4>Генерируется видео...</h4>
+
+{% endblock %}
